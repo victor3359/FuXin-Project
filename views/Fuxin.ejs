@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from demo.lorvent.com/demo_admire/admire_html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 07:00:22 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>Fuxin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link style="width:24px;height:33px;" rel="shortcut icon" href="img_new/hok_house_nb.png"/>
+    <!--global styles-->
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_rkcharts.css"/>
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_p_notify.css"/>
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_izitoast.css"/>
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_adcharts.css"/>
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_buttons.css">
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_animations.css">
+    <link type="text/css" rel="stylesheet" href="css_new/stylesheet_index.css">
+    <link type="text/css" rel="stylesheet" href="css_new/bootstrap-slider.min.css">
+    <!-- end of global styles-->
+
+    <!--Switch -->
+    <script src="javascripts/socket.io.js"></script>
+    <script src="javascripts/jquery-3.2.1.min.js"></script>
+    <script src="javascripts/bootstrap-slider.min.js"></script>
+    <script src="javascripts/pages/HokSocket.js"></script>
+
+
+</head>
+
+<body class="body">
+<div class="outer">
+    <div class="inner bg-container">
+        <div class="row m-t-15">
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>IP輸入：</b><input type="text" id="IP_IN" value="127.0.0.1"/>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>ID輸入：</b><input type="text" id="ID_IN" value="1"/>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>暫存器起始位置：</b><input type="text" id="RST_SIN" value="100"/>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>暫存器數量：</b><input type="text" id="RST_CIN" value="10"/>
+            </div>
+        </div>
+        <div class="row m-t-35">
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>機台代號輸入：</b><input type="text" id="CODE_IN" value="10"/>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>SPM數值輸入：</b><input type="text" id="SPM_IN" value="20"/>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <b>目前狀態： </b><b id="STATE_NOW"> Loading...</b><br>
+                <b>已收到： </b><b id="DATA_COUNT"> Loading...</b><b>筆資料</b>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3 row">
+                <div class="col-md-6">
+                    <input type="button" id="BTN_START" value="START"/>
+                </div>
+                <div class="col-md-6">
+                    <input type="button" id="BTN_STOP" value="STOP"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#wrap -->
+<!-- global scripts-->
+<script type="text/javascript" src="js/components.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<!--end of global scripts-->
+<!--  plugin scripts -->
+<script type="text/javascript" src="vendors/countUp.js/js/countUp.min.js"></script>
+<script type="text/javascript" src="vendors/flip/js/jquery.flip.min.js"></script>
+<script type="text/javascript" src="js/pluginjs/jquery.sparkline.js"></script>
+<script type="text/javascript" src="vendors/chartist/js/chartist.min.js"></script>
+<script type="text/javascript" src="js/pluginjs/chartist-tooltip.js"></script>
+<script type="text/javascript" src="vendors/swiper/js/swiper.min.js"></script>
+<script type="text/javascript" src="vendors/circliful/js/jquery.circliful.min.js"></script>
+<script type="text/javascript" src="vendors/flotchart/js/jquery.flot.js"></script>
+<script type="text/javascript" src="vendors/flotchart/js/jquery.flot.resize.js"></script>
+<!--end of plugin scripts-->
+
+<script src="javascripts/amcharts.js"></script>
+<script src="javascripts/amstock.js"></script>
+<script src="javascripts/serial.js"></script>
+<script src="javascripts/highcharts.js"></script>
+<script src="javascripts/exporting.js"></script>
+<link rel="stylesheet" href="css_new/export.css" type="text/css" media="all" />
+
+<script type="text/javascript" src="javascripts/pages/Fuxin.js"></script>
+
+<!-- plugin script -->
+<script type="text/javascript" src="vendors/raphael/js/raphael-min.js.pagespeed.jm.mdymR_0MgC.js"></script>
+<script type="text/javascript" src="vendors/justgage/js/justgage.js.pagespeed.jm.AXTAmfTJl6.js"></script>
+<script type="text/javascript" src="vendors/d3/js/d3.min.js.pagespeed.jm.hcZ4wO0QRk.js"></script>
+<script type="text/javascript" src="vendors/c3/js/c3.min.js.pagespeed.ce.nEKX37kL43.js"></script>
+
+
+
+<!-- Plugin scripts -->
+<script type="text/javascript" src="vendors/izitoast/js/iziToast.min.js.pagespeed.ce.yubeP2Xtg-.js"></script>
+<script type="text/javascript" src="vendors/raphael/js/raphael-min.js.pagespeed.jm.mdymR_0MgC.js"></script>
+<script type="text/javascript" src="vendors/justgage/js/justgage.js.pagespeed.jm.AXTAmfTJl6.js"></script>
+<script type="text/javascript" src="vendors/d3/js/d3.min.js.pagespeed.jm.hcZ4wO0QRk.js"></script>
+<script type="text/javascript" src="vendors/c3/js/c3.min.js.pagespeed.ce.nEKX37kL43.js"></script>
+
+
+<script src="vendors/javascript_p_notify.js"></script>
+<script>eval(mod_pagespeed_PgBWTwAB3I);</script>
+<script>eval(mod_pagespeed_37O3ld5zoQ);</script>
+<script>eval(mod_pagespeed_ZzmY5mTsAs);</script>
+<script>eval(mod_pagespeed_jVUCZO33_F);</script>
+<script>eval(mod_pagespeed_IZ2qoLVjJy);</script>
+<script>eval(mod_pagespeed_5QWOUcvZEj);</script>
+<script>eval(mod_pagespeed_vHxvsCIMRH);</script>
+<script>eval(mod_pagespeed_BityH3aJ10);</script>
+<script>eval(mod_pagespeed_WX_WC_ZJ7M);</script>
+<script>eval(mod_pagespeed_0hM1ZEEq1u);</script>
+<!--End of plugin scripts-->
+
+<script type="text/javascript" src="js/pages/p_notify.js.pagespeed.jm.E2cU5JtMgK.js"></script>
+
+</body>
+
+<!-- Mirrored from demo.lorvent.com/demo_admire/admire_html/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Sep 2017 07:01:26 GMT -->
+</html>
